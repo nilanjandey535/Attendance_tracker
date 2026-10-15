@@ -33,22 +33,13 @@ Before running the application, ensure you have:
 
 ## Installation and Setup
 
-### 1. Clone the repository
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <YOUR_PROJECT_DIRECTORY>
-```
-
-Replace the placeholders with your own repository URL and project directory.
-
-### 2. Create a virtual environment
+### Clone repository and create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it using the command appropriate for your operating system.
+Activate it using the command appropriate for operating system.
 
 **Windows PowerShell:**
 
@@ -77,18 +68,7 @@ The application requires the following environment variables:
 | `MONGO_URI` | MongoDB connection URI |
 | `MONGO_DB` | MongoDB database name |
 
-Set these variables in your local shell or configure them through your local development environment.
-
-**Example for Windows PowerShell using a local MongoDB instance:**
-
-```powershell
-$env:MONGO_URI = "mongodb://localhost:27017"
-$env:MONGO_DB = "attendance_db"
-```
-
-These are example local-development settings, not production credentials. For a hosted database, use your own connection configuration and keep credentials private.
-
-If you use a local `.env` file, ensure it is excluded from version control. Only use that approach if your application or development setup loads the file correctly.
+Set these variables in local shell or configure them through local development environment.
 
 ### 5. Start the application
 
@@ -112,14 +92,13 @@ Once the application is running, access the interactive API documentation throug
 Use Swagger UI to inspect the available endpoints, review request and response schemas, and test API operations.
 
 ## Sample Data
-
-If the repository includes `sample_seed.py`, you can use it to load the provided sample dataset:
+Use `sample_seed.py` to load the provided sample dataset:
 
 ```bash
 python sample_seed.py
 ```
 
-**Important:** The seed script may clear and replace the sample collections. Review its implementation and ensure you are connected to a disposable development database before running it. Do not run it against production or any database containing data you need to preserve.
+**Important:** The seed script may clear and replace the sample collections. Review its implementation and ensure device is connected to a disposable development database before running it. Do not run it against production or any database containing data you need to preserve.
 
 ## Implementation Notes
 
